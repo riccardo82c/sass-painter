@@ -21,7 +21,8 @@ a {
   text-decoration: none;
 }
 
-a.drop {
+a.drop-btn,
+body .container header nav.nav-bottom ul li .drop-menu a {
   font-size: 21.6px;
   display: inline-block;
   width: 80px;
@@ -29,7 +30,8 @@ a.drop {
   line-height: 45px;
 }
 
-a.drop::after {
+a.drop-btn::after,
+body .container header nav.nav-bottom ul li .drop-menu a::after {
   font-size: 14.4px;
   margin-left: 5px;
 }
@@ -42,6 +44,7 @@ a.drop::after {
 
 body {
   font-size: 18px;
+  background-color: grey;
 }
 
 body .container {
@@ -94,25 +97,60 @@ body .container header nav.nav-bottom ul {
 }
 
 body .container header nav.nav-bottom ul li {
-  text-align: center;
+  position: relative;
 }
 
 body .container header nav.nav-bottom ul li a.logo {
   color: #f0ffff;
 }
 
-body .container header nav.nav-bottom ul li a.drop {
+body .container header nav.nav-bottom ul li a.drop-btn,
+body .container header nav.nav-bottom ul li .drop-menu a {
   color: #f0ffff;
+  padding-left: 5px;
 }
 
-body .container header nav.nav-bottom ul li a.drop:after {
+body .container header nav.nav-bottom ul li a.drop-btn:after,
+body .container header nav.nav-bottom ul li .drop-menu a:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\F078";
 }
 
-body .container header nav.nav-bottom ul li a.drop:hover {
+body .container header nav.nav-bottom ul li a.drop-btn:hover,
+body .container header nav.nav-bottom ul li .drop-menu a:hover {
   background-color: #f0ffff;
   color: #111;
+}
+
+body .container header nav.nav-bottom ul li a.drop-btn:hover + .drop-menu,
+body .container header nav.nav-bottom ul li .drop-menu a:hover + .drop-menu,
+body .container header nav.nav-bottom ul li a.drop-btn .drop-menu:hover,
+body .container header nav.nav-bottom ul li .drop-menu a .drop-menu:hover {
+  display: block;
+}
+
+body .container header nav.nav-bottom ul li .drop-menu {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  position: absolute;
+  display: none;
+  left: -10px;
+  padding-right: 5px;
+  flex-direction: column;
+}
+
+body .container header nav.nav-bottom ul li .drop-menu a {
+  color: #f0ffff;
+}
+
+body .container header nav.nav-bottom ul li .drop-menu a:hover {
+  background-color: #f0ffff;
+  color: #111;
+}
+
+body .container header nav.nav-bottom ul li .drop-menu a:after {
+  content: "";
 }
 

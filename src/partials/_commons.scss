@@ -6,6 +6,7 @@
 
 body {
 	font-size: $fontSize;
+	background-color: grey;
 
 	.container {
 		background-color: $colorBlack;
@@ -45,15 +46,18 @@ body {
 					@include nav-ul;
 
 					li {
-						text-align: center;
+						position: relative;
+
+
 
 						a.logo {
 
 							color: $colorWhite;
 						}
 
-						a.drop {
+						a.drop-btn {
 							color: $colorWhite;
+							padding-left: 5px;
 
 							&:after {
 								font-family: "Font Awesome 5 Free";
@@ -66,6 +70,43 @@ body {
 								background-color: $colorWhite;
 								color: $colorBlack;
 							}
+
+							&:hover+.drop-menu,
+							.drop-menu:hover {
+								display: block;
+
+							}
+
+
+
+
+						}
+
+						.drop-menu {
+							@include nav-ul;
+							position: absolute;
+							display: none;
+							left: -10px;
+							padding-right: 5px;
+							flex-direction: column;
+
+							a {
+								@extend .drop-btn;
+								color: $colorWhite;
+
+
+
+								&:hover {
+									background-color: $colorWhite;
+									color: $colorBlack;
+								}
+
+								&:after {
+									content: '';
+								}
+							}
+
+
 						}
 
 					}
