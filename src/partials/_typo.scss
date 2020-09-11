@@ -15,9 +15,19 @@ p {
 }
 
 a {
-	font-size: $fontSize * 0.8;
+	font-size: $fontSize * 0.9;
+	text-decoration: none;
 }
 
-a.big {
+a.drop {
 	font-size: $fontSize * 1.2;
+	display: inline-block;
+	width: 80px;
+	height: 45px;
+	line-height: 45px;
+
+	&::after {
+		font-size: $fontSize * 0.8;
+		margin-left: 5px;
+	}
 }

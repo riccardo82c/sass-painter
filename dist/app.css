@@ -1,13 +1,15 @@
+@charset "UTF-8";
+
 h1 {
   font-size: 54px;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 39.6px;
 }
 
 h3 {
-  font-size: 27px;
+  font-size: 32.4px;
 }
 
 p {
@@ -15,11 +17,21 @@ p {
 }
 
 a {
-  font-size: 14.4px;
+  font-size: 16.2px;
+  text-decoration: none;
 }
 
-a.big {
+a.drop {
   font-size: 21.6px;
+  display: inline-block;
+  width: 80px;
+  height: 45px;
+  line-height: 45px;
+}
+
+a.drop::after {
+  font-size: 14.4px;
+  margin-left: 5px;
 }
 
 * {
@@ -66,14 +78,13 @@ body .container header nav.nav-bottom ul li {
 body .container header nav.nav-top ul li a,
 body .container header nav.nav-bottom ul li a {
   color: #7d8581;
-  text-decoration: none;
 }
 
 body .container header nav.nav-bottom {
   height: 48px;
-  justify-content: flex-start;
-  align-items: center;
   color: #f0ffff;
+  justify-content: flex-start;
+  line-height: 39.6px;
 }
 
 body .container header nav.nav-bottom ul {
@@ -83,11 +94,25 @@ body .container header nav.nav-bottom ul {
 }
 
 body .container header nav.nav-bottom ul li {
-  margin: 0 20px;
+  text-align: center;
 }
 
-body .container header nav.nav-bottom ul li a {
+body .container header nav.nav-bottom ul li a.logo {
   color: #f0ffff;
-  text-decoration: none;
+}
+
+body .container header nav.nav-bottom ul li a.drop {
+  color: #f0ffff;
+}
+
+body .container header nav.nav-bottom ul li a.drop:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F078";
+}
+
+body .container header nav.nav-bottom ul li a.drop:hover {
+  background-color: #f0ffff;
+  color: #111;
 }
 

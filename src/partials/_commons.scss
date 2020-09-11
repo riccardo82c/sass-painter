@@ -28,7 +28,7 @@ body {
 
 						a {
 							color: $colorGrey;
-							text-decoration: none;
+
 						}
 					}
 				}
@@ -36,23 +36,38 @@ body {
 
 			nav.nav-bottom {
 				@extend .nav-top;
-
 				height: $navHeightBottom;
-				justify-content: flex-start;
-				align-items: center;
 				color: $colorWhite;
-
+				justify-content: flex-start;
+				line-height: $fontSizeH2;
 
 				ul {
 					@include nav-ul;
 
 					li {
-						margin: 0 $marginHorMd;
+						text-align: center;
 
-						a {
+						a.logo {
+
 							color: $colorWhite;
-							text-decoration: none;
 						}
+
+						a.drop {
+							color: $colorWhite;
+
+							&:after {
+								font-family: "Font Awesome 5 Free";
+								font-weight: 900;
+								content: "\f078";
+
+							}
+
+							&:hover {
+								background-color: $colorWhite;
+								color: $colorBlack;
+							}
+						}
+
 					}
 
 				}
