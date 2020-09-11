@@ -5,31 +5,60 @@
 }
 
 body {
-	font-size: $font-size;
+	font-size: $fontSize;
 
 	.container {
-		background-color: $color-black;
+		background-color: $colorBlack;
 
 		header {
-			@include max-wid1200;
-			height: 70px;
-		}
+			@include max-wid1000;
+			height: $headerHeight;
 
-		nav {
-			display: flex;
-			justify-content: flex-end;
-
-			ul {
+			nav.nav-top {
+				height: $navHeightTop;
 				display: flex;
-				justify-content: center;
-				color: $color-grey;
-				list-style-type: none;
+				align-items: center;
+				justify-content: flex-end;
 
-				li {
-					margin: 0 $margin-hor-sm;
+				ul {
+					@include nav-ul;
+
+					li {
+						margin: 0 $marginHorSm;
+
+						a {
+							color: $colorGrey;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+
+			nav.nav-bottom {
+				@extend .nav-top;
+
+				height: $navHeightBottom;
+				justify-content: flex-start;
+				align-items: center;
+				color: $colorWhite;
+
+
+				ul {
+					@include nav-ul;
+
+					li {
+						margin: 0 $marginHorMd;
+
+						a {
+							color: $colorWhite;
+							text-decoration: none;
+						}
+					}
 
 				}
 			}
 		}
+
+
 	}
 }

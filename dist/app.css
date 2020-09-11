@@ -1,3 +1,27 @@
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 27px;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  font-size: 14.4px;
+}
+
+a.big {
+  font-size: 21.6px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,24 +38,56 @@ body .container {
 
 body .container header {
   width: 80%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  height: 70px;
+  height: 80px;
 }
 
-body .container nav {
+body .container header nav.nav-top,
+body .container header nav.nav-bottom {
+  height: 32px;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
 
-body .container nav ul {
+body .container header nav.nav-top ul,
+body .container header nav.nav-bottom ul {
   display: flex;
   justify-content: center;
-  color: #7d8581;
   list-style-type: none;
 }
 
-body .container nav ul li {
+body .container header nav.nav-top ul li,
+body .container header nav.nav-bottom ul li {
   margin: 0 10px;
+}
+
+body .container header nav.nav-top ul li a,
+body .container header nav.nav-bottom ul li a {
+  color: #7d8581;
+  text-decoration: none;
+}
+
+body .container header nav.nav-bottom {
+  height: 48px;
+  justify-content: flex-start;
+  align-items: center;
+  color: #f0ffff;
+}
+
+body .container header nav.nav-bottom ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+body .container header nav.nav-bottom ul li {
+  margin: 0 20px;
+}
+
+body .container header nav.nav-bottom ul li a {
+  color: #f0ffff;
+  text-decoration: none;
 }
 

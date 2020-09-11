@@ -1,0 +1,23 @@
+h1 {
+	font-size: $fontSizeH1;
+}
+
+h2 {
+	font-size: $fontSizeH2;
+}
+
+h3 {
+	font-size: $fontSizeH3;
+}
+
+p {
+	font-size: $fontSize;
+}
+
+a {
+	font-size: $fontSize * 0.8;
+}
+
+a.big {
+	font-size: $fontSize * 1.2;
+}

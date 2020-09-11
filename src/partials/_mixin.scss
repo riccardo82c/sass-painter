@@ -1,5 +1,12 @@
-@mixin max-wid1200 {
+@mixin max-wid1000 {
 	width: 80%;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
+}
+
+
+@mixin nav-ul {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
 }
