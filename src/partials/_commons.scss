@@ -12,7 +12,7 @@ body {
 		background-color: $colorBlack;
 
 		header {
-			@include max-wid1000;
+			@include max-wid1200;
 			height: $headerHeight;
 
 			nav.nav-top {
@@ -52,6 +52,11 @@ body {
 
 						a.logo {
 							color: $colorWhite;
+
+							h2 {
+								margin-right: $marginHorMd;
+							}
+
 						}
 
 						a.drop-btn {
@@ -67,6 +72,10 @@ body {
 							&:hover {
 								background-color: $colorWhite;
 								color: $colorBlack;
+
+								&:after {
+									content: '';
+								}
 							}
 
 							&:hover+.drop-menu {
@@ -80,7 +89,7 @@ body {
 							display: none;
 							position: absolute;
 							left: 0;
-							top: 1px;
+							top: 46px;
 							flex-direction: column;
 							background-color: $colorWhite;
 
@@ -98,11 +107,18 @@ body {
 									content: '';
 								}
 							}
+
+							a.drop-menu-btn:hover {
+								&::after {
+									font-family: "Font Awesome 5 Free";
+									font-weight: 900;
+									content: "\f054";
+								}
+							}
 						}
 
 						.drop-menu:hover {
 							display: block;
-
 						}
 					}
 				}
@@ -113,10 +129,82 @@ body {
 	.container-white {
 		background-image: url('https://www.painterartist.com/static/ptr/product_content/painteressentials/7/hero-painteressentials-7.jpg');
 		background-size: cover;
-		background-position: left;
+		background-position: right center;
+
+
 
 		.jumbotron {
+			@include max-wid1200;
 			height: $jumbotronHeigth;
+			display: flex;
+
+
+			.jumbo-empty {
+				flex: 0 0 20%;
+			}
+
+			.jumbo-title {
+				flex: 0 0 45%;
+				height: 100%;
+				color: $colorWhite;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+
+				h3 {
+
+					flex: 0 0 33%;
+
+					ul {
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-evenly;
+
+						li {
+							list-style-type: none;
+						}
+					}
+
+				}
+
+				button {
+					align-self: flex-start;
+
+					background-color: $colorGrey;
+					color: $colorWhite;
+
+
+					&:hover {
+						background-color: darken($colorGrey, 10%);
+					}
+				}
+
+			}
+
+			.jumbo-download {
+				flex: 0 0 35%;
+				border: 1px solid black;
+				background-color: rgba(0, 0, 0, 0.452);
+				padding: 20px 10px;
+
+				p {
+					margin: 20px 0;
+					color: $colorGrey;
+					text-transform: uppercase;
+				}
+
+				button {
+					background-color: $colorBlue;
+					color: $colorWhite;
+
+					&:hover {
+						background-color: darken($colorBlue, 10%);
+					}
+				}
+			}
+
+
 		}
 
 

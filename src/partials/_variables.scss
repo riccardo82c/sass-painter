@@ -1,14 +1,16 @@
 // color
 
 $colorBlack : #111;
-$colorGrey: #7d8581;
+$colorGrey:#666666;
 $colorWhite: #f0ffff;
+$colorBlue: #009cff;
 
 // font-size
 $fontSize: 18px;
-$fontSizeH1: $fontSize * 3;
-$fontSizeH2: $fontSize * 2.2;
-$fontSizeH3: $fontSize * 1.8;
+$FONT_SIZE_LOGO: 18px * 2.2;
+$fontSizeH1: $fontSize * 2.2;
+$fontSizeH2: $fontSize * 1.8;
+$fontSizeH3: $fontSize * 1.4;
 
 // margin
 $marginHorSm : 10px;
