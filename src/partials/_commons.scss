@@ -16,31 +16,33 @@ body {
 			height: $headerHeight;
 
 			nav.nav-top {
-				height: $navHeightTop;
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
+				height: $navHeightTop;
+				margin-right: $marginHorMd;
 
 				ul {
 					@include nav-ul;
 
-					li {
+					li:not(:last-child) {
 						margin: 0 $marginHorSm;
 
 						a {
 							color: $colorGrey;
-
 						}
 					}
 				}
 			}
 
 			nav.nav-bottom {
-				@extend .nav-top;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
 				height: $navHeightBottom;
 				color: $colorWhite;
-				justify-content: flex-start;
 				line-height: $fontSizeH2;
+				margin-left: $marginHorMd;
 
 				ul {
 					@include nav-ul;
@@ -48,10 +50,7 @@ body {
 					li {
 						position: relative;
 
-
-
 						a.logo {
-
 							color: $colorWhite;
 						}
 
@@ -63,7 +62,6 @@ body {
 								font-family: "Font Awesome 5 Free";
 								font-weight: 900;
 								content: "\f078";
-
 							}
 
 							&:hover {
@@ -71,48 +69,54 @@ body {
 								color: $colorBlack;
 							}
 
-							&:hover+.drop-menu,
-							.drop-menu:hover {
+							&:hover+.drop-menu {
 								display: block;
-
 							}
-
-
-
 
 						}
 
 						.drop-menu {
 							@include nav-ul;
-							position: absolute;
 							display: none;
-							left: -10px;
-							padding-right: 5px;
+							position: absolute;
+							left: 0;
+							top: 1px;
 							flex-direction: column;
+							background-color: $colorWhite;
 
 							a {
 								@extend .drop-btn;
-								color: $colorWhite;
-
-
+								color: $colorBlack;
 
 								&:hover {
-									background-color: $colorWhite;
-									color: $colorBlack;
+									background-color: $colorGrey;
+									color: $colorWhite;
+									display: block;
 								}
 
 								&:after {
 									content: '';
 								}
 							}
-
-
 						}
 
-					}
+						.drop-menu:hover {
+							display: block;
 
+						}
+					}
 				}
 			}
+		}
+	}
+
+	.container-white {
+		background-image: url('https://www.painterartist.com/static/ptr/product_content/painteressentials/7/hero-painteressentials-7.jpg');
+		background-size: cover;
+		background-position: left;
+
+		.jumbotron {
+			height: $jumbotronHeigth;
 		}
 
 
