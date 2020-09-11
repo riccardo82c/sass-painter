@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: $font-size;
+
+	.container {
+		background-color: $color-black;
+
+		header {
+			@include max-wid1200;
+			height: 70px;
+		}
+
+		nav {
+			display: flex;
+			justify-content: flex-end;
+
+			ul {
+				display: flex;
+				justify-content: center;
+				color: $color-grey;
+				list-style-type: none;
+
+				li {
+					margin: 0 $margin-hor-sm;
+
+				}
+			}
+		}
+	}
+}

@@ -1,4 +1,37 @@
-header {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+}
+
+body .container {
+  background-color: #111;
+}
+
+body .container header {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
   height: 70px;
+}
+
+body .container nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body .container nav ul {
+  display: flex;
+  justify-content: center;
+  color: #7d8581;
+  list-style-type: none;
+}
+
+body .container nav ul li {
+  margin: 0 10px;
 }
 
