@@ -1,20 +1,21 @@
 main {
 	@include max-wid1200;
 	padding: 16px;
-	height: 1200px;
+	height: 1000px;
 	display: grid;
+	gap: 16px;
 	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-	grid-template-rows: repeat(auto, minmax(400px, 800px));
 
 
 
 	div {
-		background-color: $color-white;
+
 
 		img {
-			padding: 10px;
+
 			width: 100%;
 			height: 100%;
+			box-shadow: 1px 1px 2px black;
 
 
 		}
