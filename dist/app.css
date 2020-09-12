@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  background-color: black;
+}
+
 h1 {
   font-size: 39.6px;
 }
@@ -10,6 +21,11 @@ h2 {
 
 h3 {
   font-size: 25.2px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 300;
 }
 
 p {
@@ -25,21 +41,6 @@ a {
   text-decoration: none;
 }
 
-a.drop-btn,
-body .container header nav.nav-bottom ul li .drop-menu a {
-  font-size: 21.6px;
-  display: inline-block;
-  width: 120px;
-  height: 45px;
-  line-height: 45px;
-}
-
-a.drop-btn::after,
-body .container header nav.nav-bottom ul li .drop-menu a::after {
-  font-size: 14.4px;
-  margin-left: 5px;
-}
-
 button {
   padding: 10px 30px;
   outline: none;
@@ -47,29 +48,18 @@ button {
   cursor: pointer;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-size: 18px;
-  background-color: grey;
-}
-
-body .container {
+.container {
   background-color: #111;
 }
 
-body .container header {
+.container header {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
   height: 80px;
 }
 
-body .container header nav.nav-top {
+.container header nav.nav-top {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -77,21 +67,21 @@ body .container header nav.nav-top {
   margin-right: 20px;
 }
 
-body .container header nav.nav-top ul {
+.container header nav.nav-top ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
 }
 
-body .container header nav.nav-top ul li:not(:last-child) {
+.container header nav.nav-top ul li:not(:last-child) {
   margin: 0 10px;
 }
 
-body .container header nav.nav-top ul li:not(:last-child) a {
+.container header nav.nav-top ul li:not(:last-child) a {
   color: #666666;
 }
 
-body .container header nav.nav-bottom {
+.container header nav.nav-bottom {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -101,54 +91,61 @@ body .container header nav.nav-bottom {
   margin-left: 20px;
 }
 
-body .container header nav.nav-bottom ul {
+.container header nav.nav-bottom ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
 }
 
-body .container header nav.nav-bottom ul li {
+.container header nav.nav-bottom ul li {
   position: relative;
 }
 
-body .container header nav.nav-bottom ul li a.logo {
+.container header nav.nav-bottom ul li a.logo {
   color: #f0ffff;
 }
 
-body .container header nav.nav-bottom ul li a.logo h2 {
+.container header nav.nav-bottom ul li a.logo h2 {
   margin-right: 20px;
 }
 
-body .container header nav.nav-bottom ul li a.drop-btn,
-body .container header nav.nav-bottom ul li .drop-menu a {
+.container header nav.nav-bottom ul li a.drop-btn,
+.container header nav.nav-bottom ul li .drop-menu a {
   color: #f0ffff;
   padding-left: 5px;
+  font-size: 21.6px;
+  display: inline-block;
+  width: 120px;
+  height: 45px;
+  line-height: 45px;
 }
 
-body .container header nav.nav-bottom ul li a.drop-btn:after,
-body .container header nav.nav-bottom ul li .drop-menu a:after {
+.container header nav.nav-bottom ul li a.drop-btn:after,
+.container header nav.nav-bottom ul li .drop-menu a:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\F078";
+  font-size: 14.4px;
+  margin-left: 5px;
 }
 
-body .container header nav.nav-bottom ul li a.drop-btn:hover,
-body .container header nav.nav-bottom ul li .drop-menu a:hover {
+.container header nav.nav-bottom ul li a.drop-btn:hover,
+.container header nav.nav-bottom ul li .drop-menu a:hover {
   background-color: #f0ffff;
   color: #111;
 }
 
-body .container header nav.nav-bottom ul li a.drop-btn:hover:after,
-body .container header nav.nav-bottom ul li .drop-menu a:hover:after {
+.container header nav.nav-bottom ul li a.drop-btn:hover:after,
+.container header nav.nav-bottom ul li .drop-menu a:hover:after {
   content: "";
 }
 
-body .container header nav.nav-bottom ul li a.drop-btn:hover + .drop-menu,
-body .container header nav.nav-bottom ul li .drop-menu a:hover + .drop-menu {
+.container header nav.nav-bottom ul li a.drop-btn:hover + .drop-menu,
+.container header nav.nav-bottom ul li .drop-menu a:hover + .drop-menu {
   display: block;
 }
 
-body .container header nav.nav-bottom ul li .drop-menu {
+.container header nav.nav-bottom ul li .drop-menu {
   display: flex;
   justify-content: center;
   list-style-type: none;
@@ -160,37 +157,37 @@ body .container header nav.nav-bottom ul li .drop-menu {
   background-color: #f0ffff;
 }
 
-body .container header nav.nav-bottom ul li .drop-menu a {
+.container header nav.nav-bottom ul li .drop-menu a {
   color: #111;
 }
 
-body .container header nav.nav-bottom ul li .drop-menu a:hover {
+.container header nav.nav-bottom ul li .drop-menu a:hover {
   background-color: #666666;
   color: #f0ffff;
   display: block;
 }
 
-body .container header nav.nav-bottom ul li .drop-menu a:after {
+.container header nav.nav-bottom ul li .drop-menu a:after {
   content: "";
 }
 
-body .container header nav.nav-bottom ul li .drop-menu a.drop-menu-btn:hover::after {
+.container header nav.nav-bottom ul li .drop-menu a.drop-menu-btn:hover::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\F054";
 }
 
-body .container header nav.nav-bottom ul li .drop-menu:hover {
+.container header nav.nav-bottom ul li .drop-menu:hover {
   display: block;
 }
 
-body .container-white {
+.container-img {
   background-image: url("https://www.painterartist.com/static/ptr/product_content/painteressentials/7/hero-painteressentials-7.jpg");
   background-size: cover;
   background-position: right center;
 }
 
-body .container-white .jumbotron {
+.container-img .jumbotron {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
@@ -198,11 +195,11 @@ body .container-white .jumbotron {
   display: flex;
 }
 
-body .container-white .jumbotron .jumbo-empty {
+.container-img .jumbotron .jumbo-empty {
   flex: 0 0 20%;
 }
 
-body .container-white .jumbotron .jumbo-title {
+.container-img .jumbotron .jumbo-title {
   flex: 0 0 45%;
   height: 100%;
   color: #f0ffff;
@@ -211,50 +208,109 @@ body .container-white .jumbotron .jumbo-title {
   justify-content: space-around;
 }
 
-body .container-white .jumbotron .jumbo-title h3 {
+.container-img .jumbotron .jumbo-title h4 {
   flex: 0 0 33%;
 }
 
-body .container-white .jumbotron .jumbo-title h3 ul {
+.container-img .jumbotron .jumbo-title h4 ul {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-body .container-white .jumbotron .jumbo-title h3 ul li {
+.container-img .jumbotron .jumbo-title h4 ul li {
   list-style-type: none;
 }
 
-body .container-white .jumbotron .jumbo-title button {
+.container-img .jumbotron .jumbo-title button {
   align-self: flex-start;
   background-color: #666666;
   color: #f0ffff;
 }
 
-body .container-white .jumbotron .jumbo-title button:hover {
+.container-img .jumbotron .jumbo-title button:hover {
   background-color: #4d4d4d;
 }
 
-body .container-white .jumbotron .jumbo-download {
+.container-img .jumbotron .jumbo-download {
   flex: 0 0 35%;
   border: 1px solid black;
   background-color: rgba(0, 0, 0, 0.452);
   padding: 20px 10px;
 }
 
-body .container-white .jumbotron .jumbo-download p {
+.container-img .jumbotron .jumbo-download p {
   margin: 20px 0;
   color: #666666;
   text-transform: uppercase;
 }
 
-body .container-white .jumbotron .jumbo-download button {
+.container-img .jumbotron .jumbo-download button {
   background-color: #009cff;
   color: #f0ffff;
 }
 
-body .container-white .jumbotron .jumbo-download button:hover {
+.container-img .jumbotron .jumbo-download button:hover {
   background-color: #007dcc;
+}
+
+.container-white {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f0ffff;
+}
+
+.container-white section.sticky-menu {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 64px;
+}
+
+.container-white section.sticky-menu nav.sticky {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-white section.sticky-menu nav.sticky ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.container-white section.sticky-menu nav.sticky ul li {
+  margin: 0 55px;
+}
+
+.container-white section.sticky-menu nav.sticky ul li a.sticky-btn {
+  color: #666666;
+  font-size: 19.8px;
+}
+
+main {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  height: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: repeat(auto, minmax(400px, 800px));
+}
+
+main div {
+  background-color: #f0ffff;
+}
+
+main div img {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
 }
 

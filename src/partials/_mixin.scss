@@ -1,10 +1,13 @@
+// snippets 
+
+// max width inside full width container
 @mixin max-wid1200 {
 	width: 95%;
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
-
+// horiz list inside nav
 @mixin nav-ul {
 	display: flex;
 	justify-content: center;

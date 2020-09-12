@@ -1,0 +1,123 @@
+.container {
+	background-color: $color-black;
+
+	header {
+		@include max-wid1200;
+		height: $header-height;
+
+		nav.nav-top {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			height: $nav-height-top;
+			margin-right: $margin-hor-md;
+
+			ul {
+				@include nav-ul;
+
+				li:not(:last-child) {
+					margin: 0 $margin-hor-sm;
+
+					a {
+						color: $color-grey;
+					}
+				}
+			}
+		}
+
+		nav.nav-bottom {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			height: $nav-height-bottom;
+			color: $color-white;
+			line-height: $font-size-h2;
+			margin-left: $margin-hor-md;
+
+			ul {
+				@include nav-ul;
+
+				li {
+					position: relative;
+
+					a.logo {
+						color: $color-white;
+
+						h2 {
+							margin-right: $margin-hor-md;
+						}
+
+					}
+
+					a.drop-btn {
+						color: $color-white;
+						padding-left: 5px;
+						font-size: $font-size * 1.2;
+						display: inline-block;
+						width: 120px;
+						height: 45px;
+						line-height: 45px;
+
+						&:after {
+							font-family: "Font Awesome 5 Free";
+							font-weight: 900;
+							content: "\f078";
+							font-size: $font-size * 0.8;
+							margin-left: 5px;
+						}
+
+						&:hover {
+							background-color: $color-white;
+							color: $color-black;
+
+							&:after {
+								content: '';
+							}
+						}
+
+						&:hover+.drop-menu {
+							display: block;
+						}
+					}
+
+					.drop-menu {
+						@include nav-ul;
+						display: none;
+						position: absolute;
+						left: 0;
+						top: 46px;
+						flex-direction: column;
+						background-color: $color-white;
+
+						a {
+							@extend .drop-btn;
+							color: $color-black;
+
+							&:hover {
+								background-color: $color-grey;
+								color: $color-white;
+								display: block;
+							}
+
+							&:after {
+								content: '';
+							}
+						}
+
+						a.drop-menu-btn:hover {
+							&::after {
+								font-family: "Font Awesome 5 Free";
+								font-weight: 900;
+								content: "\f054";
+							}
+						}
+					}
+
+					.drop-menu:hover {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

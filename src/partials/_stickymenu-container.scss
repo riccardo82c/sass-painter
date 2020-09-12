@@ -1,0 +1,32 @@
+.container-white {
+	position: sticky;
+	top: 0;
+	background-color: $color-white;
+
+	section.sticky-menu {
+		@include max-wid1200;
+		height: $header-height * 0.8;
+
+		nav.sticky {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			ul {
+				@include nav-ul;
+				width: 100%;
+				justify-content: center;
+
+				li {
+					margin: 0 $margin-hor-xl;
+
+					a.sticky-btn {
+						color: $color-grey;
+						font-size: $font-size * 1.1;
+					}
+				}
+			}
+		}
+	}
+}
