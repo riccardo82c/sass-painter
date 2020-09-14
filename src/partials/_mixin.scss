@@ -21,3 +21,11 @@
 	justify-content: $justify;
 	align-items: $align;
 }
+
+@mixin flex-ul ($direction, $justify, $align) {
+	list-style-type: none;
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}

@@ -3,17 +3,20 @@
 
 	footer.footer-top {
 		@include max-wid1200;
-		height: 300px;
-		@include nav-ul2(row, space-between, flex-start);
+
+		padding: $padding-med;
+		@include flex-ul(row, space-between, flex-start);
+		flex-wrap: wrap;
 
 		ul {
-			@include nav-ul2(column, flex-start, flex-start);
+			@include flex-ul(column, flex-start, flex-start);
+			padding: $padding-min;
+			flex: 1 0 25%;
 
 			a {
 				color: $color-grey;
 			}
 		}
-
 	}
 }
 

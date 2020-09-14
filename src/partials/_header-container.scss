@@ -4,12 +4,11 @@
 
 	header {
 		@include max-wid1200;
-		height: $header-height;
+		/* height: $header-height; */
 
 		nav.nav-top {
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
+
+			@include flex-ul(row, flex-end, center);
 			height: $nav-height-top;
 			margin-right: $margin-hor-md;
 

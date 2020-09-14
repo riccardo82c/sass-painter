@@ -55,13 +55,15 @@ button {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
-  height: 80px;
+  /* height: $header-height; */
 }
 
 .container header nav.nav-top {
+  list-style-type: none;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   height: 32px;
   margin-right: 20px;
 }
@@ -322,12 +324,13 @@ button {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
-  height: 300px;
+  padding: 20px;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .container-footer-top footer.footer-top ul {
@@ -336,6 +339,8 @@ button {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 10px;
+  flex: 1 0 25%;
 }
 
 .container-footer-top footer.footer-top ul a {
