@@ -1,0 +1,30 @@
+.container-footer-top {
+	background-color: $color-light-grey;
+
+	footer.footer-top {
+		@include max-wid1200;
+		height: 300px;
+		@include nav-ul2(row, space-between, flex-start);
+
+		ul {
+			@include nav-ul2(column, flex-start, flex-start);
+
+			a {
+				color: $color-grey;
+			}
+		}
+
+	}
+}
+
+.container-footer-bottom {
+	background-color: $color-black;
+
+	footer.footer-bottom {
+		@include max-wid1200;
+		height: 100px;
+
+
+
+	}
+}

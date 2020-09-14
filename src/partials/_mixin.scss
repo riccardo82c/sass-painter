@@ -13,3 +13,11 @@
 	justify-content: center;
 	list-style-type: none;
 }
+
+@mixin nav-ul2 ($direction, $justify, $align) {
+	list-style-type: none;
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
